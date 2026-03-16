@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Githure Secondary - News & Events</title>
+    <style>
+        /* Copy base styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 1rem 0; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo h1 { font-size: 2rem; margin-bottom: 5px; }
+        .logo p { font-style: italic; font-size: 0.9rem; opacity: 0.9; }
+        .hours { background: #ffd700; color: #1e3c72; padding: 8px 15px; border-radius: 25px; font-weight: bold; }
+        nav { background: #0a1f3b; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav-menu { display: flex; list-style: none; justify-content: center; flex-wrap: wrap; }
+        .nav-menu a { color: white; text-decoration: none; padding: 1rem 1.5rem; display: block; transition: 0.3s; }
+        .nav-menu a:hover { background: #ffd700; color: #1e3c72; }
+        
+        .page-header { background: #2a5298; color: white; text-align: center; padding: 60px 20px; }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        
+        /* News & Events Specific */
+        .news-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+        
+        .news-card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.1); margin-bottom: 30px; }
+        .news-image { height: 250px; background: linear-gradient(45deg, #1e3c72, #2a5298); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem; }
+        .news-content { padding: 25px; }
+        .news-date { color: #2a5298; font-weight: bold; margin-bottom: 10px; }
+        .news-title { color: #1e3c72; font-size: 1.8rem; margin-bottom: 15px; }
+        .news-summary { margin-bottom: 20px; }
+        .read-more { color: #2a5298; text-decoration: none; font-weight: bold; }
+        
+        .sidebar { background: #f5f5f5; padding: 25px; border-radius: 10px; }
+        .sidebar-section { margin-bottom: 40px; }
+        .sidebar h3 { color: #1e3c72; margin-bottom: 20px; font-size: 1.5rem; border-bottom: 3px solid #ffd700; padding-bottom: 10px; }
+        
+        .event-item { display: flex; gap: 15px; padding: 15px 0; border-bottom: 1px solid #ddd; }
+        .event-date { background: #1e3c72; color: white; width: 60px; height: 60px; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+        .event-date .day { font-size: 1.5rem; font-weight: bold; line-height: 1; }
+        .event-date .month { font-size: 0.8rem; }
+        .event-details h4 { color: #1e3c72; margin-bottom: 5px; }
+        .event-details p { color: #666; font-size: 0.9rem; }
+        
+        .archive-list { list-style: none; }
+        .archive-list li { padding: 10px 0; border-bottom: 1px solid #ddd; }
+        .archive-list a { color: #333; text-decoration: none; display: flex; justify-content: space-between; }
+        .archive-list a:hover { color: #1e3c72; }
+        
+        .announcement { background: #ffd700; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .announcement p { font-weight: bold; margin-bottom: 5px; }
+        
+        .calendar-preview { background: white; padding: 20px; border-radius: 8px; }
+        .calendar-preview table { width: 100%; border-collapse: collapse; }
+        .calendar-preview th { color: #1e3c72; padding: 10px; }
+        .calendar-preview td { text-align: center; padding: 10px; border: 1px solid #eee; }
+        .calendar-preview .event-day { background: #ffd700; font-weight: bold; }
+        
+        footer { background: #0a1f3b; color: white; padding: 50px 0 20px; margin-top: 50px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-section h4 { color: #ffd700; margin-bottom: 20px; }
+        .footer-section ul { list-style: none; }
+        .footer-section li { margin-bottom: 10px; }
+        .footer-section a { color: white; text-decoration: none; transition: 0.3s; }
+        .footer-section a:hover { color: #ffd700; }
+        .copyright { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #2a5298; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>GITHURE SECONDARY</h1>
+                <p>Excellence • Integrity • Service</p>
+            </div>
+            <div class="hours">🕒 Open: Mon 07:00 - 16:45</div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="student-life.html">Student Life</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-header">
+        <h1>News & Events</h1>
+        <p>Stay updated with the latest at Githure Secondary</p>
+    </section>
+    
+    <div class="container">
+        <div class="announcement">
+            <p>📢 IMPORTANT ANNOUNCEMENT</p>
+            <p>School reopens for Term 1 on January 6, 2026. All students to report by 8:00 AM.</p>
+        </div>
+        
+        <div class="news-grid">
+            <div class="news-main">
+                <!-- Featured News -->
+                <div class="news-card">
+                    <div class="news-image">🏆</div>
+                    <div class="news-content">
+                        <div class="news-date">December 15, 2025</div>
+                        <h2 class="news-title">Githure Secondary Shines in County Sports</h2>
+                        <p class="news-summary">Our school emerged first overall in the recently concluded County Secondary Schools Sports Tournament. The football team brought home the trophy after an exciting final match. Congratulations to all our athletes!</p>
+                        <a href="#" class="read-more">Read Full Story →</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">📚</div>
+                    <div class="news-content">
+                        <div class="news-date">December 5, 2025</div>
+                        <h2 class="news-title">KCSE 2025 Results: Our Best Performance Yet</h2>
+                        <p class="news-summary">We are proud to announce that our candidates posted an impressive mean score of 7.8, with 65% qualifying for university. Special recognition to our top student who scored an A plain.</p>
+                        <a href="#" class="read-more">Read Full Story →</a>
+                    </div>
+                </div>
+                
+                <div class="news-card">
+                    <div class="news-image">🎭</div>
+                    <div class="news-content">
+                        <div class="news-date">November 20, 2025</div>
+                        <h2 class="news-title">Drama Festival Winners</h2>
+                        <p class="news-summary">Our drama club emerged winners in the regional drama festival with their original production on environmental conservation. They will represent the region at the national level.</p>
+                        <a href="#" class="read-more">Read Full Story →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <div class="sidebar-section">
+                    <h3>Upcoming Events</h3>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">JAN</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Parents' Meeting</h4>
+                            <p>9:00 AM - Hall</p>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">20</span>
+                            <span class="month">JAN</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Inter-class Football</h4>
+                            <p>2:00 PM - Sports Ground</p>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">28</span>
+                            <span class="month">JAN</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Science Fair</h4>
+                            <p>10:00 AM - Lab Complex</p>
+                        </div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">
+                            <span class="day">05</span>
+                            <span class="month">FEB</span>
+                        </div>
+                        <div class="event-details">
+                            <h4>Career Day</h4>
+                            <p>9:00 AM - Hall</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Calendar Preview</h3>
+                    <div class="calendar-preview">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>M</th><th>T</th><th>W</th><th>T</th><th>F</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td><td>2</td><td class="event-day">3</td><td>4</td><td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td><td>9</td><td>10</td><td class="event-day">11</td><td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td><td>16</td><td class="event-day">17</td><td>18</td><td>19</td>
+                                </tr>
+                                <tr>
+                                    <td>22</td><td>23</td><td>24</td><td class="event-day">25</td><td>26</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p style="text-align: center; margin-top: 10px;"><a href="#">View Full Calendar →</a></p>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>News Archive</h3>
+                    <ul class="archive-list">
+                        <li><a href="#">December 2025 <span>8</span></a></li>
+                        <li><a href="#">November 2025 <span>12</span></a></li>
+                        <li><a href="#">October 2025 <span>10</span></a></li>
+                        <li><a href="#">September 2025 <span>7</span></a></li>
+                        <li><a href="#">August 2025 <span>9</span></a></li>
+                    </ul>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h3>Subscribe to Updates</h3>
+                    <form style="margin-top: 15px;">
+                        <input type="email" placeholder="Your email address" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                        <button type="submit" style="width: 100%; padding: 10px; background: #1e3c72; color: white; border: none; border-radius: 5px; cursor: pointer;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>📍 Githure, Kenya</li>
+                    <li>📞 +254 712 345 678</li>
+                    <li>✉️ info@githuresec.ac.ke</li>
+                    <li>🕒 Mon: 07:00 - 16:45</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="news.html">School Calendar</a></li>
+                    <li><a href="#">Parent Portal</a></li>
+                    <li><a href="#">Student Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="#">Fee Structure</a></li>
+                    <li><a href="#">Uniform List</a></li>
+                    <li><a href="#">Application Form</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Githure Secondary School. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

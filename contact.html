@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Githure Secondary - Contact Us</title>
+    <style>
+        /* Copy base styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 1rem 0; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo h1 { font-size: 2rem; margin-bottom: 5px; }
+        .logo p { font-style: italic; font-size: 0.9rem; opacity: 0.9; }
+        .hours { background: #ffd700; color: #1e3c72; padding: 8px 15px; border-radius: 25px; font-weight: bold; }
+        nav { background: #0a1f3b; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav-menu { display: flex; list-style: none; justify-content: center; flex-wrap: wrap; }
+        .nav-menu a { color: white; text-decoration: none; padding: 1rem 1.5rem; display: block; transition: 0.3s; }
+        .nav-menu a:hover { background: #ffd700; color: #1e3c72; }
+        
+        .page-header { background: #2a5298; color: white; text-align: center; padding: 60px 20px; }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        
+        /* Contact Specific */
+        .contact-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; }
+        
+        .contact-info { background: #f5f5f5; padding: 30px; border-radius: 10px; }
+        .contact-info h2 { color: #1e3c72; margin-bottom: 30px; font-size: 1.8rem; }
+        .info-item { display: flex; gap: 20px; margin-bottom: 30px; align-items: flex-start; }
+        .info-icon { width: 50px; height: 50px; background: #ffd700; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .info-text h3 { color: #1e3c72; margin-bottom: 5px; }
+        .info-text p { color: #666; }
+        
+        .contact-form { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #1e3c72; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; transition: 0.3s; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #1e3c72; box-shadow: 0 0 5px rgba(30,60,114,0.3); }
+        .form-group textarea { height: 150px; resize: vertical; }
+        .submit-btn { background: #1e3c72; color: white; border: none; padding: 15px 30px; font-size: 1.1rem; font-weight: bold; border-radius: 5px; cursor: pointer; transition: 0.3s; width: 100%; }
+        .submit-btn:hover { background: #2a5298; transform: translateY(-2px); }
+        
+        .map-container { margin: 50px 0; height: 400px; background: #eef2f7; border-radius: 10px; overflow: hidden; position: relative; }
+        .map-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #ddd; color: #666; font-size: 1.2rem; }
+        
+        .staff-directory { margin: 50px 0; }
+        .staff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
+        .staff-card { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); text-align: center; }
+        .staff-img { width: 120px; height: 120px; background: #ddd; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .staff-card h3 { color: #1e3c72; margin-bottom: 5px; }
+        .staff-card .position { color: #2a5298; font-weight: bold; margin-bottom: 10px; }
+        .staff-card .contact-small { color: #666; font-size: 0.9rem; margin-bottom: 5px; }
+        
+        .faq-section { background: #f9f9f9; padding: 50px; border-radius: 10px; margin: 50px 0; }
+        .faq-item { margin-bottom: 20px; border-bottom: 1px solid #ddd; padding-bottom: 20px; }
+        .faq-question { color: #1e3c72; font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; cursor: pointer; }
+        .faq-answer { color: #666; }
+        
+        footer { background: #0a1f3b; color: white; padding: 50px 0 20px; margin-top: 50px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-section h4 { color: #ffd700; margin-bottom: 20px; }
+        .footer-section ul { list-style: none; }
+        .footer-section li { margin-bottom: 10px; }
+        .footer-section a { color: white; text-decoration: none; transition: 0.3s; }
+        .footer-section a:hover { color: #ffd700; }
+        .copyright { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #2a5298; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>GITHURE SECONDARY</h1>
+                <p>Excellence • Integrity • Service</p>
+            </div>
+            <div class="hours">🕒 Open: Mon 07:00 - 16:45</div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="student-life.html">Student Life</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-header">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you</p>
+    </section>
+    
+    <div class="container">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-text">
+                        <h3>Visit Us</h3>
+                        <p>Githure Secondary School<br>Githure Village, Embu County<br>Kenya</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div class="info-text">
+                        <h3>Call Us</h3>
+                        <p>Office: +254 712 345 678<br>Principal: +254 723 456 789<br>Bursar: +254 734 567 890</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">✉️</div>
+                    <div class="info-text">
+                        <h3>Email Us</h3>
+                        <p>info@githuresec.ac.ke<br>admissions@githuresec.ac.ke<br>principal@githuresec.ac.ke</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">🕒</div>
+                    <div class="info-text">
+                        <h3>Office Hours</h3>
+                        <p>Monday: 07:00 - 16:45<br>Tuesday - Friday: 07:30 - 16:30<br>Saturday: 09:00 - 12:00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h2 style="color: #1e3c72; margin-bottom: 30px;">Send a Message</h2>
+                <form>
+                    <div class="form-group">
+                        <label>Your Name *</label>
+                        <input type="text" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Enter your phone number">
+                    </div>
+                    <div class="form-group">
+                        <label>Subject *</label>
+                        <input type="text" placeholder="What is this about?" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Message *</label>
+                        <textarea placeholder="Type your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="map-container">
+            <div class="map-placeholder">
+                🗺️ Google Map of Githure Secondary will be embedded here<br>
+                <small>(Replace this with actual Google Maps embed code)</small>
+            </div>
+        </div>
+        
+        <section class="staff-directory">
+            <h2 style="color: #1e3c72; font-size: 2rem; text-align: center;">Key Staff Contacts</h2>
+            <div class="staff-grid">
+                <div class="staff-card">
+                    <div class="staff-img">👨‍🏫</div>
+                    <h3>Mr. John Kamau</h3>
+                    <div class="position">Principal</div>
+                    <p class="contact-small">principal@githuresec.ac.ke</p>
+                    <p class="contact-small">+254 723 456 789</p>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-img">👩‍🏫</div>
+                    <h3>Ms. Jane Wanjiku</h3>
+                    <div class="position">Deputy Principal</div>
+                    <p class="contact-small">deputy@githuresec.ac.ke</p>
+                    <p class="contact-small">+254 734 567 890</p>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-img">👨‍💼</div>
+                    <h3>Mr. Peter Mwangi</h3>
+                    <div class="position">Academic Dean</div>
+                    <p class="contact-small">academics@githuresec.ac.ke</p>
+                    <p class="contact-small">+254 745 678 901</p>
+                </div>
+                <div class="staff-card">
+                    <div class="staff-img">👩‍💼</div>
+                    <h3>Mrs. Mary Akinyi</h3>
+                    <div class="position">Admissions Officer</div>
+                    <p class="contact-small">admissions@githuresec.ac.ke</p>
+                    <p class="contact-small">+254 756 789 012</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq-section">
+            <h2 style="color: #1e3c72; font-size: 2rem; text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">📌 What are the admission requirements?</div>
+                <div class="faq-answer">For Form 1 entry, you need KCPE results, birth certificate, and 2 passport photos. Transfer students need previous school reports. Visit our Admissions page for full details.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">📌 When does the school year start?</div>
+                <div class="faq-answer">The academic year follows the national school calendar. Term 1 typically begins in January, Term 2 in May, and Term 3 in September.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">📌 Do you offer boarding facilities?</div>
+                <div class="faq-answer">Yes, we have well-maintained boarding facilities for both boys and girls with house masters/mistresses and full-time matrons.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">📌 How can parents track student progress?</div>
+                <div class="faq-answer">We hold regular parent-teacher conferences, send home progress reports every term, and have a parent portal for online access.</div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>📍 Githure, Kenya</li>
+                    <li>📞 +254 712 345 678</li>
+                    <li>✉️ info@githuresec.ac.ke</li>
+                    <li>🕒 Mon: 07:00 - 16:45</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="news.html">School Calendar</a></li>
+                    <li><a href="#">Parent Portal</a></li>
+                    <li><a href="#">Student Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="#">Fee Structure</a></li>
+                    <li><a href="#">Uniform List</a></li>
+                    <li><a href="#">Application Form</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Githure Secondary School. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>

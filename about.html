@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Githure Secondary - About Us</title>
+    <style>
+        /* Copy all styles from index.html here */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 1rem 0; }
+        .header-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo h1 { font-size: 2rem; margin-bottom: 5px; }
+        .logo p { font-style: italic; font-size: 0.9rem; opacity: 0.9; }
+        .hours { background: #ffd700; color: #1e3c72; padding: 8px 15px; border-radius: 25px; font-weight: bold; }
+        nav { background: #0a1f3b; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .nav-menu { display: flex; list-style: none; justify-content: center; flex-wrap: wrap; }
+        .nav-menu a { color: white; text-decoration: none; padding: 1rem 1.5rem; display: block; transition: 0.3s; }
+        .nav-menu a:hover { background: #ffd700; color: #1e3c72; }
+        
+        /* Page Specific Styles */
+        .page-header { background: #2a5298; color: white; text-align: center; padding: 60px 20px; }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .container { max-width: 1200px; margin: 50px auto; padding: 0 20px; }
+        
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+        .about-content h2 { color: #1e3c72; margin-bottom: 20px; font-size: 2rem; }
+        .about-content p { margin-bottom: 15px; font-size: 1.1rem; }
+        
+        .mission-vision { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 50px 0; }
+        .mission-card, .vision-card { background: #f5f5f5; padding: 40px; border-radius: 10px; text-align: center; }
+        .mission-card h3, .vision-card h3 { color: #1e3c72; font-size: 1.8rem; margin-bottom: 20px; }
+        
+        .values { background: #1e3c72; color: white; padding: 50px 0; text-align: center; }
+        .values h2 { font-size: 2.2rem; margin-bottom: 40px; }
+        .values-grid { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+        .value-item { padding: 20px; }
+        .value-item h4 { color: #ffd700; font-size: 1.3rem; margin-bottom: 10px; }
+        
+        .principal-section { display: grid; grid-template-columns: 300px 1fr; gap: 50px; background: #f9f9f9; padding: 50px; border-radius: 10px; margin: 50px 0; }
+        .principal-img { background: #ddd; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+        .principal-message h2 { color: #1e3c72; margin-bottom: 20px; }
+        .principal-message p { margin-bottom: 15px; font-style: italic; }
+        .signature { font-family: cursive; font-size: 1.5rem; margin-top: 30px; }
+        
+        #facilities { margin: 50px 0; }
+        .facilities-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 30px; }
+        .facility-item { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        .facility-img { height: 200px; background: #ddd; display: flex; align-items: center; justify-content: center; }
+        .facility-item h4 { padding: 20px 20px 10px; color: #1e3c72; }
+        .facility-item p { padding: 0 20px 20px; }
+        
+        footer { background: #0a1f3b; color: white; padding: 50px 0 20px; margin-top: 50px; }
+        .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .footer-section h4 { color: #ffd700; margin-bottom: 20px; }
+        .footer-section ul { list-style: none; }
+        .footer-section li { margin-bottom: 10px; }
+        .footer-section a { color: white; text-decoration: none; transition: 0.3s; }
+        .footer-section a:hover { color: #ffd700; }
+        .copyright { text-align: center; margin-top: 50px; padding-top: 20px; border-top: 1px solid #2a5298; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>GITHURE SECONDARY</h1>
+                <p>Excellence • Integrity • Service</p>
+            </div>
+            <div class="hours">🕒 Open: Mon 07:00 - 16:45</div>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="student-life.html">Student Life</a></li>
+                <li><a href="news.html">News & Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <section class="page-header">
+        <h1>About Githure Secondary</h1>
+        <p>Discover our story, mission, and values</p>
+    </section>
+    
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content">
+                <h2>Our History</h2>
+                <p>Founded in 1985, Githure Secondary School has been a beacon of educational excellence in the region for over four decades. What started as a small community school has grown into a premier secondary institution serving students from across the county.</p>
+                <p>Through the years, we have maintained our commitment to holistic education, producing graduates who excel in academics, leadership, and character. Our alumni include doctors, engineers, teachers, and community leaders who continue to make positive contributions to society.</p>
+            </div>
+            <div style="background: #ddd; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 10px;">🏫 School Photo</div>
+        </div>
+        
+        <div class="mission-vision">
+            <div class="mission-card">
+                <h3>Our Mission</h3>
+                <p>To provide quality, holistic education that nurtures academic excellence, moral integrity, and responsible citizenship in a supportive and stimulating environment.</p>
+            </div>
+            <div class="vision-card">
+                <h3>Our Vision</h3>
+                <p>To be a center of academic excellence producing well-rounded, innovative, and morally upright leaders who transform their communities.</p>
+            </div>
+        </div>
+    </div>
+    
+    <section class="values">
+        <h2>Our Core Values</h2>
+        <div class="values-grid">
+            <div class="value-item">
+                <h4>Excellence</h4>
+                <p>Striving for the highest standards in everything we do</p>
+            </div>
+            <div class="value-item">
+                <h4>Integrity</h4>
+                <p>Honesty, transparency, and moral uprightness</p>
+            </div>
+            <div class="value-item">
+                <h4>Respect</h4>
+                <p>Valuing diversity and treating all with dignity</p>
+            </div>
+            <div class="value-item">
+                <h4>Teamwork</h4>
+                <p>Working together for common goals</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="container">
+        <div class="principal-section">
+            <div class="principal-img">👤 Principal's Photo</div>
+            <div class="principal-message">
+                <h2>Message from the Principal</h2>
+                <p>Welcome to Githure Secondary School, a place where dreams are nurtured and futures are shaped. As principal, I am proud to lead a dedicated team of educators who are passionate about developing each student's full potential.</p>
+                <p>Our school is more than just a place of learning; it's a community where students discover their talents, build lasting friendships, and develop the character needed to succeed in life. We believe in educating the whole person – academically, socially, and spiritually.</p>
+                <p>I invite you to explore our website and, better yet, visit our campus to experience the Githure difference firsthand.</p>
+                <div class="signature">Mr. John Kamau<br>Principal</div>
+            </div>
+        </div>
+        
+        <section id="facilities">
+            <h2 style="color: #1e3c72; text-align: center; font-size: 2rem; margin-bottom: 40px;">Our Facilities</h2>
+            <div class="facilities-grid">
+                <div class="facility-item">
+                    <div class="facility-img">🔬 Science Labs</div>
+                    <h4>Modern Science Laboratories</h4>
+                    <p>Fully equipped Biology, Chemistry, and Physics labs for hands-on learning</p>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-img">📚 Library</div>
+                    <h4>Resourceful Library</h4>
+                    <p>Extensive collection of books, reference materials, and quiet study areas</p>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-img">💻 Computer Lab</div>
+                    <h4>ICT Center</h4>
+                    <p>Modern computers with internet access for digital literacy</p>
+                </div>
+                <div class="facility-item">
+                    <div class="facility-img">⚽ Sports Field</div>
+                    <h4>Sports Complex</h4>
+                    <p>Football field, volleyball court, and athletics track</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>📍 Githure, Kenya</li>
+                    <li>📞 +254 712 345 678</li>
+                    <li>✉️ info@githuresec.ac.ke</li>
+                    <li>🕒 Mon: 07:00 - 16:45</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="news.html">School Calendar</a></li>
+                    <li><a href="#">Parent Portal</a></li>
+                    <li><a href="#">Student Portal</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Downloads</h4>
+                <ul>
+                    <li><a href="#">Fee Structure</a></li>
+                    <li><a href="#">Uniform List</a></li>
+                    <li><a href="#">Application Form</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2026 Githure Secondary School. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
